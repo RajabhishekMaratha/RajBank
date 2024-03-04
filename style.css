@@ -60,7 +60,7 @@ main {
 .flashy-button {
   background-color: #f04e4e; /* Orange */
   color: white;
-  padding: 15px 30px;
+  padding: 40px 30px;
   border: none;
   border-radius: 5px;
   font-size: 18px;
@@ -71,5 +71,5 @@ main {
 
 .flashy-button:hover {
   background-color: #c03939; /* Darker orange on hover */
-  transform: scale(1.02); /* Slight scale on hover */
+  transform: scale(1.0); /* Slight scale on hover */
 }
