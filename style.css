@@ -1,0 +1,47 @@
+body {
+    font-family: Arial, sans-serif;
+}
+ 
+header {
+    background-color: #f0f0f0;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+ 
+h1, h2 {
+    margin: 0;
+}
+ 
+nav a {
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #333;
+}
+ 
+nav a:hover {
+    background-color: #ddd;
+}
+ 
+main {
+    padding: 20px;
+}
+ 
+.banners {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+ 
+.banner {
+    padding: 20px;
+    border: 1px solid #ddd;
+    width: 30%;
+    margin-bottom: 10px;
+}
+ 
+.banner h3 {
+    margin-bottom: 1
+}
