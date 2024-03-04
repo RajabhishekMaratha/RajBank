@@ -45,3 +45,15 @@ main {
 .banner h3 {
     margin-bottom: 1
 }
+
+.banner {
+  width: 300px; /* Adjust width based on your chosen size */
+  height: 250px; /* Adjust height based on your chosen size */
+}
+
+
+
+.banner {
+  max-width: 300px; /* Adjust width as needed */
+  height: auto; /* Automatically adjust height to maintain aspect ratio */
+}
