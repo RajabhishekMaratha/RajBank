@@ -57,3 +57,19 @@ main {
   max-width: 300px; /* Adjust width as needed */
   height: auto; /* Automatically adjust height to maintain aspect ratio */
 }
+.flashy-button {
+  background-color: #f04e4e; /* Orange */
+  color: white;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.flashy-button:hover {
+  background-color: #c03939; /* Darker orange on hover */
+  transform: scale(1.02); /* Slight scale on hover */
+}
