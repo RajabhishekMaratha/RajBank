@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Credit Card Form</title>
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+      }
+
+      .container {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .card {
+        width: 100%;
+        max-width: 600px;
+        background-color: #fff;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      h1 {
+        text-align: center;
+        margin-top: 30px;
+      }
+
+      .personal-details,
+      .address-details {
+        margin-bottom: 20px;
+      }
+
+      h2 {
+        font-size: 18px;
+        margin-bottom: 10px;
+      }
+
+      .form-group {
+        margin-bottom: 15px;
+      }
+
+      label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: bold;
+      }
+
+      input[type="text"],
+      input[type="email"],
+      input[type="tel"],
+      input[type="date"] {
+        width: calc(100% - 22px);
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-sizing: border-box;
+      }
+
+      input[type="submit"] {
+        width: 100%;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        padding: 15px;
+        font-size: 16px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease-in-out;
+      }
+
+      input[type="submit"]:hover {
+        background-color: #0056b3;
+      }
+
+      .footer {
+        background-color: #333;
+        color: #fff;
+        padding: 20px 0;
+        margin-top: auto;
+        text-align: center;
+      }
+
+      .footer__logo img {
+        height: 40px;
+      }
+
+      .footer__copy {
+        margin-top: 10px;
+      }
+
+      .back-to-top {
+        margin-top: 20px;
+      }
+    </style>
+
+    <!-- Google Tag Manager -->
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-M82LCZG2");
+    </script>
+    <!-- End Google Tag Manager -->
+
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-JLL3GVW8CQ"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-JLL3GVW8CQ");
+    </script>
+  </head>
+  <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-M82LCZG2"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      ></iframe
+    ></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <header class="l-header" id="header">
+      <nav class="nav bd-container">
+        <a href="#" class="nav__logo">
+          <img src="assets/img/Main-Logo.png" alt="Your Logo" />
+        </a>
+        <div class="nav__menu" id="nav-menu">
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a href="index.html" class="nav__link">HOME</a>
+            </li>
+            <li class="nav__item">
+              <a href="credit.html" class="nav__link">CREDIT CARD</a>
+            </li>
+            <li class="nav__item">
+              <a href="personal.html" class="nav__link">PERSONAL LOAN</a>
+            </li>
+            <li class="nav__item">
+              <a href="homeloan.html" class="nav__link">HOME LOAN</a>
+            </li>
+            <li class="nav__item">
+              <a href="#contact" class="nav__link">CONTACT</a>
+            </li>
+          </ul>
+        </div>
+        <div class="nav__toggle" id="nav-toggle">
+          <i class="bx bx-menu"></i>
+        </div>
+      </nav>
+    </header>
+    <div class="container">
+      <div class="card">
+        <h1>Home Loan Details</h1>
+        <form id="creditCardForm" method="post" action="confirm.html">
+          <div class="personal-details">
+            <h2>Personal Details</h2>
+            <div class="form-group">
+              <label for="fullName">Full Name:</label>
+              <input type="text" id="fullName" name="fullName" required />
+            </div>
+            <div class="form-group">
+              <label for="email">Email:</label>
+              <input type="email" id="email" name="email" required />
+            </div>
+            <div class="form-group">
+              <label for="phoneNumber">Phone Number:</label>
+              <input type="tel" id="phoneNumber" name="phoneNumber" required />
+            </div>
+            <div class="form-group">
+              <label for="dob">Date of Birth:</label>
+              <input type="date" id="dob" name="dob" required />
+            </div>
+          </div>
+          <div class="address-details">
+            <h2>Address Details</h2>
+            <div class="form-group">
+              <label for="address">Address:</label>
+              <input type="text" id="address" name="address" required />
+            </div>
+            <div class="form-group">
+              <label for="city">City:</label>
+              <input type="text" id="city" name="city" required />
+            </div>
+            <div class="form-group">
+              <label for="state">State:</label>
+              <input type="text" id="state" name="state" required />
+            </div>
+            <div class="form-group">
+              <label for="zipCode">Zip Code:</label>
+              <input type="text" id="zipCode" name="zipCode" required />
+            </div>
+            <div class="form-group">
+              <label for="country">Country:</label>
+              <input type="text" id="country" name="country" required />
+            </div>
+          </div>
+          <!-- Your form fields here -->
+          <div class="submit-btn">
+            <input type="submit" value="Submit" />
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <script>
+      function redirectToConfirmation() {
+        window.location.href = "confirmation.html";
+      }
+    </script>
+    <!--========== FOOTER ==========-->
+    <footer class="footer section bd-container">
+      <div class="footer-content">
+        <nav class="nav bd-container">
+          <div class="footer__left">
+            <a href="#" class="nav__logo">
+              <img src="assets/img/Main-Logo-Footer.png" alt="Your Logo" />
+            </a>
+            <div class="footer__right">
+              <p class="footer__copy">&#169; 2024 Mahesh. All right reserved</p>
+            </div>
+          </div>
+          <div class="back-to-top">
+            <a href="#top"> ^ Back to Top</a>
+          </div>
+        </nav>
+      </div>
+    </footer>
+  </body>
+</html>
