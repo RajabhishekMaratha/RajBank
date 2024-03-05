@@ -89,3 +89,19 @@ h2 {
   background-color: #c03939; /* Darker orange on hover */
   transform: scale(1.02); /* Slight scale on hover */
 }
+
+#application-container {
+  width: 80%;
+  margin: auto;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 10px;
+}
+
+.loan-type {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+
