@@ -21,6 +21,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Application</title>
   <link rel="stylesheet" href="style.css">
+  <script>
+    function submitForm(event) {
+      event.preventDefault(); // Prevent the form from submitting normally
+      // If validation is successful, redirect to the confirmation page
+      window.location.href = 'confirm.html';
+    }
+  </script>
 </head>
 <body>
   <!-- Google Tag Manager (noscript) -->
