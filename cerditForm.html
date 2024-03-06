@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Credit Card Form</title>
+    <link rel="stylesheet" href="style.css" >
+    <link
+      href="https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+      }
+
+      .container {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .card {
+        width: 100%;
+        max-width: 600px;
+        background-color: #fff;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      h1 {
+        text-align: center;
+        margin-top: 30px;
+      }
+
+      h2 {
+        font-size: 18px;
+        margin-bottom: 10px;
+      }
+
+      .form-group {
+        margin-bottom: 15px;
+      }
+
+      label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: bold;
+      }
+
+      input[type="text"],
+      input[type="email"],
+      input[type="tel"],
+      input[type="date"] {
+        width: calc(100% - 22px);
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-sizing: border-box;
+      }
+
+      input[type="submit"],
+      .back-btn {
+        width: calc(50% - 7.5px); /* Adjusted width for buttons */
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        padding: 15px;
+        font-size: 16px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease-in-out;
+      }
+
+      .next-btn {
+        width: calc(50% - 7.5px); /* Adjusted width for buttons */
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        align-items: center;
+        padding: 15px;
+        font-size: 16px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease-in-out;
+      }
+
+      input[type="submit"]:hover,
+      .back-btn:hover {
+        background-color: #0056b3;
+      }
+
+      /* Next Button Styles */
+      .next-btn {
+        background-color: #4caf50;
+        align-items: center;
+        float: right; /* Align to the right */
+      }
+
+      .next-btn:hover {
+        background-color: #45a049;
+      }
+
+      .next-btn:active {
+        background-color: #3e8e41;
+      }
+
+      /* Back Button Styles */
+      .back-btn {
+        background-color: #f44336;
+      }
+
+      .back-btn:hover {
+        background-color: #d32f2f;
+      }
+
+      .back-btn:active {
+        background-color: #b71c1c;
+      }
+
+      /* Animation for Next Button */
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      .button-container {
+        animation: fadeIn 0.5s ease;
+      }
+
+      /* Address details initially hidden */
+      .address-details {
+        display: none;
+      }
+    </style>
+    <style>
+      body {
+        background-color: rgb(242, 250, 253);
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WTD7JQ9R"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+    <<header style="background-color: #3f51b5; color: white;">
+    <a href="index.html"><h1>My Bank</h1></a> <nav>
+      <a href="#credit-card">Credit Card</a>
+      <a href="#personal-loan">Personal Loan</a>
+      <a href="#home-loan">Home Loan</a>
+    </nav>
+  </header>
+      
+    <div class="container">
+      <div class="card">
+        <h1>Home Loan Details</h1>
+        <form id="creditCardForm" method="post" onsubmit="submitForm(event)">
+          <div class="personal-details">
+            <h2>Personal Details</h2>
+            <div class="form-group">
+              <label for="fullName">Full Name:</label>
+              <input type="text" id="fullName" name="fullName" required />
+            </div>
+            <div class="form-group">
+              <label for="email">Email:</label>
+              <input type="email" id="email" name="email" required />
+            </div>
+            <div class="form-group">
+              <label for="phoneNumber">Phone Number:</label>
+              <input type="tel" id="phoneNumber" name="phoneNumber" required />
+            </div>
+            <div class="form-group">
+              <label for="dob">Date of Birth:</label>
+              <input type="date" id="dob" name="dob" required />
+            </div>
+            <div class="button-container">
+              <button class="next-btn" onclick="showAddressDetails()">
+                Next
+              </button>
+            </div>
+          </div>
+          <div class="address-details">
+            <h2>Address Details</h2>
+            <div class="form-group">
+              <label for="address">Address:</label>
+              <input type="text" id="address" name="address" required />
+            </div>
+            <div class="form-group">
+              <label for="city">City:</label>
+              <input type="text" id="city" name="city" required />
+            </div>
+            <div class="form-group">
+              <label for="state">State:</label>
+              <input type="text" id="state" name="state" required />
+            </div>
+            <div class="form-group">
+              <label for="zipCode">Zip Code:</label>
+              <input type="text" id="zipCode" name="zipCode" required />
+            </div>
+            <div class="form-group">
+              <label for="country">Country:</label>
+              <input type="text" id="country" name="country" required />
+            </div>
+            <div class="button-container">
+              <button class="back-btn" onclick="showPersonalDetails()">
+                Back
+              </button>
+              <input type="submit" value="Submit" class="next-btn" />
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <script>
+      function submitForm(event) {
+        event.preventDefault();
+        window.location.href = "confirm.html";
+      }
+
+      function showAddressDetails() {
+        var personalDetails = document.querySelector(".personal-details");
+        var addressDetails = document.querySelector(".address-details");
+        personalDetails.style.display = "none";
+        addressDetails.style.display = "block";
+      }
+
+      function showPersonalDetails() {
+        var personalDetails = document.querySelector(".personal-details");
+        var addressDetails = document.querySelector(".address-details");
+        personalDetails.style.display = "block";
+        addressDetails.style.display = "none";
+      }
+    </script>
+
+    <!--========== FOOTER ==========-->
+    <footer class="footer section bd-container">
+      <div class="footer-content">
+        <nav class="nav bd-container">
+          <div class="footer__left">
+            <a href="#" class="nav__logo">
+              <img src="assets/img/Main-Logo-Footer.png" alt="Your Logo" />
+            </a>
+            <div class="footer__right">
+              <p class="footer__copy">&#169; 2024 Rajabhishek. All right reserved</p>
+            </div>
+          </div>
+          <div class="back-to-top">
+            <a href="#top"> ^ Back to Top</a>
+          </div>
+        </nav>
+      </div>
+    </footer>
+  </body>
+</html>
